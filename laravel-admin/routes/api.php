@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -19,9 +20,5 @@ use App\Http\Controllers\UserController;
 //     return $request->user();
 // });
 
+Route::post('login', [AuthController::class, 'login']);
 Route::apiResource('users', UserController::class);
-// Route::get('users', [UserController::class, 'index']);
-// Route::get('user/{id}', [UserController::class, 'show']);
-// Route::post('insertUser', [UserController::class, 'store']);
-// Route::put('updateUser', [UserController::class, 'update']);
-// Route::delete('deleteUser', [UserController::class, 'destroy']);
