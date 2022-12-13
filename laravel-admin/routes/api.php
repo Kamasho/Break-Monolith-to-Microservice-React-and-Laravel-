@@ -19,9 +19,9 @@ use App\Http\Controllers\UserController;
 //     return $request->user();
 // });
 
-//Route::apiResource('users', [UserController::class]);
-Route::get('users', [UserController::class, 'index']);
-Route::get('user/{id}', [UserController::class, 'show']);
-Route::post('insertUser', [UserController::class, 'store']);
-Route::put('updateUser', [UserController::class, 'update']);
-Route::delete('deleteUser', [UserController::class, 'destroy']);
+Route::apiResource('users', UserController::class);
+// Route::get('users', [UserController::class, 'index']);
+// Route::get('user/{id}', [UserController::class, 'show']);
+// Route::post('insertUser', [UserController::class, 'store']);
+// Route::put('updateUser', [UserController::class, 'update']);
+// Route::delete('deleteUser', [UserController::class, 'destroy']);
